@@ -41,13 +41,22 @@ I used data from week 13 when all people were still involved. They are rounded t
 
 Therefore, the resulting test combinations are:
 
-| League Number | Absolute Value of Test Score |
-|---------------|------------------------------|
-| 1 & 2         | 0.136                        |
-| 2 & 3         | 0.023                        |
-| 3 & 1         | 0.105                        |
+| League Numbers | Absolute Value of Test Score |
+|----------------|------------------------------|
+| 1 & 2          | 0.136                        |
+| 2 & 3          | 0.023                        |
+| 3 & 1          | 0.105                        |
 
 Seeing as all three are much less than two, their means are approximately the same, and the Z-Score methodology should be valid.
 
+In addition, to cover my bases, [I used an unpooled (populations are unconnected) t-test calculator](https://www.usablestats.com/calcs/2samplet&summary=1) to reject the null hypothesis that the two means are different than each other.
 
+| League Numbers | P-Value |
+|----------------|---------|
+| 1 & 2          | 0.709   |
+| 2 & 3          | 0.962   |
+| 3 & 1          | 0.763   |
 
+Lastly, I did a [one way ANOVA between the three data sets](https://goodcalculators.com/one-way-anova-calculator/) which had a F-statistic value = 0.11863 and a P-value = 0.88873.Both numbers suggest there is no difference between the three leagues.
+
+I clearly don't know everything about statistics, but, it appears that throughout all tests, it seems the variances and means are about the same and the Z-Score should be fine for cross-league normalization.
