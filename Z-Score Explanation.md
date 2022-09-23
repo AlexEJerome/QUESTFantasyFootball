@@ -1,0 +1,62 @@
+# Z-Score Explanation
+### Using Z-Score between Fantasty Football Leagues to have a true relative score
+#### By Alex Jerome
+
+## The Need
+
+Last year we had 3 Fantasy Football leagues that we wanted have fight against each other. For the finals, we picked a top 8 bracket from the top 8 "Best Performers".
+
+We determined the "Best performers" through Z-Score - a metric that would work between leagues.
+
+## Is it Valid?
+
+Now, ~1 year after the Z-Score introduction, is it a valid metric?
+
+In short, **yes** (I think).
+
+## Proving it
+
+Just some context, I got degrees in Marketing & CS. I don't know much about statistics. If I'm wrong, please reach out to me to correct this. I'm excited to learn!
+
+### What is Z-Score?
+
+Z-score is a measure of standard deviations from the mean. The general formula is: ![Z = {\frac{x-\mu}{\sigma}}](https://render.githubusercontent.com/render/math?math=%5CLARGE+%5Ctextstyle+Z+%3D+%7B%5Cfrac%7Bx-%5Cmu%7D%7B%5Csigma%7D%7D)
+ where ![X](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+X)
+ is the observed value (your sum of "points for"), ![\mu](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Cmu)
+ is the individual league's "points for" mean, and ![\sigma](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Csigma) is the standard deviation of the individual league's "points for" metric.
+
+### Using the Z-Test.
+
+According to the University of Oregon, [Z-Score is valid as long as the Z-Test says the means are about the same](http://homework.uoregon.edu/pub/class/es202/ztest.html). "About the same" is a Z-Test number whose absolute value is less than two.
+
+The formula for the Z-Test is: ![Z = {\frac{\bar X_1 - \bar X_2}{\sqrt{\sigma^2_{X_1}+\sigma^2_{X_2}}}}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+Z+%3D+%7B%5Cfrac%7B%5Cbar+X_1+-+%5Cbar+X_2%7D%7B%5Csqrt%7B%5Csigma%5E2_%7BX_1%7D%2B%5Csigma%5E2_%7BX_2%7D%7D%7D%7D) where ![\bar X_1](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Cbar+X_1) is the mean value of sample one, ![\bar X_2](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Cbar+X_2) is the mean value of sample two, ![\sigma_{X_1}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Csigma_%7BX_1%7D) is the standard deviation of sample one divided by the square root of the number of data points, ![\sigma_{X_2}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Csigma_%7BX_2%7D) is the standard deviation of sample two divided by the square root of the number of data points.
+
+I used data from week 13 when all people were still involved. They are rounded to the nearest whole number.
+
+| League Number | Mean | Std. Deviation |
+|---------------|------|----------------|
+| 1             | 1476 | 180            |
+| 2             | 1448 | 100            |
+| 3             | 1451 | 142            |
+
+Therefore, the resulting test combinations are:
+
+| League Numbers | Absolute Value of Test Score |
+|----------------|------------------------------|
+| 1 & 2          | 0.136                        |
+| 2 & 3          | 0.023                        |
+| 3 & 1          | 0.105                        |
+
+Seeing as all three are much less than two, their means are approximately the same, and the Z-Score methodology should be valid.
+
+In addition, to cover my bases, [I used an unpooled (populations are unconnected) t-test calculator](https://www.usablestats.com/calcs/2samplet&summary=1) to reject the null hypothesis that the two means are different than each other.
+
+| League Numbers | P-Value |
+|----------------|---------|
+| 1 & 2          | 0.709   |
+| 2 & 3          | 0.962   |
+| 3 & 1          | 0.763   |
+
+Lastly, I did a [one way ANOVA between the three data sets](https://goodcalculators.com/one-way-anova-calculator/) which had a F-statistic value = 0.11863 and a P-value = 0.88873. Both numbers suggest there is no difference between the three leagues.
+
+I clearly don't know everything about statistics, but, it appears that throughout all tests, it seems the variances and means are about the same and the Z-Score should be fine for cross-league normalization.
