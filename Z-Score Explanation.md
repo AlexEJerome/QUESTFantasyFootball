@@ -22,7 +22,7 @@ Just some context, I got degrees in Marketing & CS. I don't know much about stat
 
 Z-score is a measure of standard deviations from the mean. The general formula is: $Z = {\frac{x-\mu}{\sigma}}$
  where $X$ is the observed value (your sum of "points for"), $\mu$
- is the individual league's "points for" mean, and !$\sigma$ is the standard deviation of the individual league's "points for" metric.
+ is the individual league's "points for" mean, and $\sigma$ is the standard deviation of the individual league's "points for" metric.
 
 ### Using the Z-Test.
 
