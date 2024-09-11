@@ -20,16 +20,15 @@ Just some context, I got degrees in Marketing & CS. I don't know much about stat
 
 ### What is Z-Score?
 
-Z-score is a measure of standard deviations from the mean. The general formula is: ![Z = {\frac{x-\mu}{\sigma}}](https://render.githubusercontent.com/render/math?math=%5CLARGE+%5Ctextstyle+Z+%3D+%7B%5Cfrac%7Bx-%5Cmu%7D%7B%5Csigma%7D%7D)
- where ![X](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+X)
- is the observed value (your sum of "points for"), ![\mu](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Cmu)
- is the individual league's "points for" mean, and ![\sigma](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Csigma) is the standard deviation of the individual league's "points for" metric.
+Z-score is a measure of standard deviations from the mean. The general formula is: $Z = {\frac{x-\mu}{\sigma}}$
+ where $X$ is the observed value (your sum of "points for"), $\mu$
+ is the individual league's "points for" mean, and !$\sigma$ is the standard deviation of the individual league's "points for" metric.
 
 ### Using the Z-Test.
 
 According to the University of Oregon, [Z-Score is valid as long as the Z-Test says the means are about the same](http://homework.uoregon.edu/pub/class/es202/ztest.html). "About the same" is a Z-Test number whose absolute value is less than two.
 
-The formula for the Z-Test is: ![Z = {\frac{\bar X_1 - \bar X_2}{\sqrt{\sigma^2_{X_1}+\sigma^2_{X_2}}}}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+Z+%3D+%7B%5Cfrac%7B%5Cbar+X_1+-+%5Cbar+X_2%7D%7B%5Csqrt%7B%5Csigma%5E2_%7BX_1%7D%2B%5Csigma%5E2_%7BX_2%7D%7D%7D%7D) where ![\bar X_1](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Cbar+X_1) is the mean value of sample one, ![\bar X_2](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Cbar+X_2) is the mean value of sample two, ![\sigma_{X_1}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Csigma_%7BX_1%7D) is the standard deviation of sample one divided by the square root of the number of data points, ![\sigma_{X_2}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Csigma_%7BX_2%7D) is the standard deviation of sample two divided by the square root of the number of data points.
+The formula for the Z-Test is: $Z = {\frac{\bar X_1 - \bar X_2}{\sqrt{\sigma^2_{X_1}+\sigma^2_{X_2}}}}$ where $\bar X_1$ is the mean value of sample one, $\bar X_2$ is the mean value of sample two, $\sigma_{X_1}$ is the standard deviation of sample one divided by the square root of the number of data points, $\sigma_{X_2}$ is the standard deviation of sample two divided by the square root of the number of data points.
 
 I used data from week 13 when all people were still involved. They are rounded to the nearest whole number.
 
